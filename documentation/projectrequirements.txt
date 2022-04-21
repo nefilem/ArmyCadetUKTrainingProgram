@@ -1,0 +1,12 @@
+Project: Training Program
+The focus of this project is the creation of a monthly training program. The program creation should be controlled allowing only the selection of lessons available within a subject area at the selected level.
+To extend the project the different types of access to the resulting program and who is able to create a program can be tackled.
+The Army Cadet Force is an MOD sponsored youth organisation who run military themed training for 12-18 year olds. Cadets can Earn nationally recognised qualifications along side the ACF syllabus.
+There are a number of subjects in the syllabus each with a number of lessons. There are different levels of training that progress in difficulty. Not all subjects are covered at each level.
+Most training is conducted at detachments for which this system is designed. Detachments run training evenings typically consisting or 2 session on each evening. They will run training for several groups (grouped by level) at the same time. Each group and session could be on a different subject.
+Client: HSY Army Cadet Force:
+Contact: Capt N Bizzell (@Neil)
+Product Backlog: https://docs.google.com/spreadsheets/d/1cpAL8n5rXuvDrUDecRsmeLG6GfhhqyvDX1-VfD81anI/edit
+There is a folder with some additional information including a previous iteration created in excel (that uses the old syllabus) and the new syllabus which details the subjects and the lessons at each level - https://drive.google.com/drive/folders/1_Nwtji1cOhWDAecsgANN9_drtWtlsUwr?usp=sharing
+The ACF brand center which shows how ACF information should be presented is found at this address - https://armycadets.com/brand-centre/?gclid=Cj0KCQjwmPSSBhCNARIsAH3cYgY_Sk8dzFA_Kk6wF0esm9TSugP5t_Yxn7OiGyrODDwcD_PHOxWLZbkaAmF4EALw_wcB (edited) 
+

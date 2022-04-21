@@ -1,0 +1,478 @@
+try {
+	db.lesson.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+	db.lessons.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+  db.lessons.insertMany( [
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "01", "lessondescription" : "Care & Cleaning of Uniform", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "02", "lessondescription" : "Foot Drill - The Aims & Purpose of Drill", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "03", "lessondescription" : "Foot Drill - The Positions of Attention, Stand At Ease & Stand Easy", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "04", "lessondescription" : "Foot Drill - Left, Right & About Turn At The Halt", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "05", "lessondescription" : "Foot Drill - Compliments - Reason, Origin & Information", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "06", "lessondescription" : "Foot Drill - Saluting to the Front", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "07", "lessondescription" : "Foot Drill - Introduction to Marching", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "08", "lessondescription" : "Foot Drill - Marching & Halting in Quick Time", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "09", "lessondescription" : "Foot Drill - Revision", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "DT",  "subjectno" : "10", "lessondescription" : "Drill & Turnout - Foot Drill Test", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "MK",  "subjectno" : "01", "lessondescription" : "Ranks & Badges of Rank", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "MK",  "subjectno" : "02", "lessondescription" : "The History of the Army Cadet Force to Present Day", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "MK",  "subjectno" : "03", "lessondescription" : "Enrolment Ceremony", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "MK",  "subjectno" : "04", "lessondescription" : "Military Knowledge Test", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SAA",  "subjectno" : "01", "lessondescription" : "Lecture on Shooting in the Army Cadet Force, Competitions & Classifications", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SAA",  "subjectno" : "02", "lessondescription" : "Talk on Safety - Including Rules for Handling & Firing ACF Weapon Systems", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SAA",  "subjectno" : "03", "lessondescription" : "Penetration Demonstration of the Air Rifle/.22 Rifle", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SAA",  "subjectno" : "04", "lessondescription" : "The Air Rifle - Safety, Loading & Unloading", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SAA",  "subjectno" : "05", "lessondescription" : "The Air Rifle - Weapon Handling Test", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SAA",  "subjectno" : "06", "lessondescription" : ".22 Rifle - Safety Precautions, Care, Cleaning & Ammunition Safe Guards", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SAA",  "subjectno" : "07", "lessondescription" : ".22 Rifle - Sight Setting, Loading & Unloading", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SAA",  "subjectno" : "08", "lessondescription" : ".22 Rifle - Weapon Handling Test", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SH",  "subjectno" : "01", "lessondescription" : "Introduction to Marksmanship Principles", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SH",  "subjectno" : "02", "lessondescription" : "Grouping Practises", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "SH",  "subjectno" : "03", "lessondescription" : "Grouping Practises - Test", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "NAV",  "subjectno" : "01", "lessondescription" : "Introduction to Maps & Care and Use of Maps", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "NAV",  "subjectno" : "02", "lessondescription" : "Identifying Handrails & Map Orientation", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "NAV",  "subjectno" : "03", "lessondescription" : "Using Handrails & Maintaining Position with an Orientated Map", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "NAV",  "subjectno" : "04", "lessondescription" : "Navigation Practice", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "NAV",  "subjectno" : "05", "lessondescription" : "Revision", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "NAV",  "subjectno" : "06", "lessondescription" : "Navigation Test", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "FC",  "subjectno" : "01", "lessondescription" : "Introduction to Cadet Fieldcraft", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "FC",  "subjectno" : "02", "lessondescription" : "Preparation and Packing of Personal Equipment", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "FC",  "subjectno" : "03", "lessondescription" : "Fieldcraft Test", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "FA",  "subjectno" : "01", "lessondescription" : "Heartstart - Part 1", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "FA",  "subjectno" : "02", "lessondescription" : "Heartstart - Part 2", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "EXP",  "subjectno" : "01", "lessondescription" : "Introduction & The Countryside Code", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "EXP",  "subjectno" : "02", "lessondescription" : "Expedition Training Tests", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "PT",  "subjectno" : "01", "lessondescription" : "Basic Physical Achievement Training", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "PT",  "subjectno" : "02", "lessondescription" : "Basic Physical Achievement Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "DT",  "subjectno" : "01", "lessondescription" : "Revise All Movements Taught at Basic Level", "other" : [] },
+{ "levelid" : "One", "subjectid" : "DT",  "subjectno" : "02", "lessondescription" : "Foot Drill - Forming Up Into Three Ranks & Getting On Parade", "other" : [] },
+{ "levelid" : "One", "subjectid" : "DT",  "subjectno" : "03", "lessondescription" : "Foot Drill - Open & Close Order", "other" : [] },
+{ "levelid" : "One", "subjectid" : "DT",  "subjectno" : "04", "lessondescription" : "Foot Drill - Dismissing & Falling Out", "other" : [] },
+{ "levelid" : "One", "subjectid" : "DT",  "subjectno" : "05", "lessondescription" : "Foot Drill - Wheeling in Quick Time", "other" : [] },
+{ "levelid" : "One", "subjectid" : "DT",  "subjectno" : "06", "lessondescription" : "Foot Drill - About Turn in Quick Time", "other" : [] },
+{ "levelid" : "One", "subjectid" : "DT",  "subjectno" : "07", "lessondescription" : "Foot Drill - Saluting on the March - Eyes Left & Right", "other" : [] },
+{ "levelid" : "One", "subjectid" : "DT",  "subjectno" : "08", "lessondescription" : "Drill & Turnout Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "MK",  "subjectno" : "01", "lessondescription" : "The Army Cadet Force Organisation at County Level", "other" : [] },
+{ "levelid" : "One", "subjectid" : "MK",  "subjectno" : "02", "lessondescription" : "Military Knowledge Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "01", "lessondescription" : "Cadet GP Rifle - General Description Safety & Sights", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "02", "lessondescription" : "Cadet GP Rifle - Stripping & Assembling", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "03", "lessondescription" : "Cadet GP Rifle - Basic Handling Skills", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "04", "lessondescription" : "Cadet GP Rifle - Cleaning & Maintenance", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "05", "lessondescription" : "Cadet GP Rifle -  Holding & Aiming in the Prone Position", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "06", "lessondescription" : "Cadet GP Rifle - Firing Drills", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "07", "lessondescription" : "Cadet GP Rifle - Firing from Other Positions and Use of Cover", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "08", "lessondescription" : "Cadet GP Rifle - Mechanism of the Weapon, Immediate Action & Stoppages", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "09", "lessondescription" : "Cadet GP Rifle - The Blank Firing System", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "10", "lessondescription" : "Cadet GP Rifle - Revision", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SAA",  "subjectno" : "11", "lessondescription" : "Cadet GP Rifle - Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SH",  "subjectno" : "01", "lessondescription" : "The Air Rifle or .22 Rifle Grouping Practise", "other" : [] },
+{ "levelid" : "One", "subjectid" : "SH",  "subjectno" : "02", "lessondescription" : "The Air Rifle or .22 Rifle Grouping Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "NAV",  "subjectno" : "01", "lessondescription" : "Map Symbols & Using Features to Aid Navigation", "other" : ["Reliability of a Map & Marginal Information","The Grid System and Six Figure Grid References","Conventional Signs","Map Scales & Measuring Distances","North Points","Setting a Map by Landmarks","Navigation Practises Using an OS Map","Revision","Test"] },
+{ "levelid" : "One", "subjectid" : "NAV",  "subjectno" : "02", "lessondescription" : "Estimating Distance Using Grid Squares & Four-Figure Grid References", "other" : [] },
+{ "levelid" : "One", "subjectid" : "NAV",  "subjectno" : "03", "lessondescription" : "Six-figure Grid References", "other" : [] },
+{ "levelid" : "One", "subjectid" : "NAV",  "subjectno" : "04", "lessondescription" : "Estimating Distances on the Ground", "other" : [] },
+{ "levelid" : "One", "subjectid" : "NAV",  "subjectno" : "05", "lessondescription" : "Navigation Practices", "other" : [] },
+{ "levelid" : "One", "subjectid" : "NAV",  "subjectno" : "06", "lessondescription" : "Navigation Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "01", "lessondescription" : "Administration in the Field - Maintaining Weapons, Clothing and Equipment", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "02", "lessondescription" : "Administration in the Field - Maintaining Standards of Personal Hygiene", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "03", "lessondescription" : "Administration in the Field - Feeding in the Field", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "04", "lessondescription" : "The Two Man Shelter", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "05", "lessondescription" : "Why Things Are Seen?", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "06", "lessondescription" : "Personal Camouflage and Concealment", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "07", "lessondescription" : "Judging Distance - By Unit of Measure", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "08", "lessondescription" : "Judging Distance - By Appearance", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "09", "lessondescription" : "Judging Distance - Aids to Judging Distances", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "10", "lessondescription" : "Indication of Targets", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "11", "lessondescription" : "Range Cards", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "12", "lessondescription" : "Duties of a Sentry", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "13", "lessondescription" : "Moving With and Without Personal Weapons", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "14", "lessondescription" : "Field Signals", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "15", "lessondescription" : "Elementary Obstacle Crossing", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "16", "lessondescription" : "Selecting a Route Across Country", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "17", "lessondescription" : "Introduction to Night Training", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "18", "lessondescription" : "Elementary Night Movement", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "19", "lessondescription" : "Stalking", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "20", "lessondescription" : "Reaction to Fire Control Orders", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FC",  "subjectno" : "21", "lessondescription" : "Fieldcraft Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FA",  "subjectno" : "01", "lessondescription" : "Treatment of Minor Bleeding & Shock", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FA",  "subjectno" : "02", "lessondescription" : "Recognition of Bone, Muscle & Joint Injuries", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FA",  "subjectno" : "03", "lessondescription" : "Bites, Stings & Foreign Objects", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FA",  "subjectno" : "04", "lessondescription" : "Keeping Safe & Warm", "other" : [] },
+{ "levelid" : "One", "subjectid" : "FA",  "subjectno" : "05", "lessondescription" : "First Aid Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "EXP",  "subjectno" : "01", "lessondescription" : "Building the Team", "other" : [] },
+{ "levelid" : "One", "subjectid" : "EXP",  "subjectno" : "02", "lessondescription" : "Expedition Equipment", "other" : [] },
+{ "levelid" : "One", "subjectid" : "EXP",  "subjectno" : "03", "lessondescription" : "Load Carrying", "other" : [] },
+{ "levelid" : "One", "subjectid" : "EXP",  "subjectno" : "04", "lessondescription" : "The Camp Site", "other" : [] },
+{ "levelid" : "One", "subjectid" : "EXP",  "subjectno" : "05", "lessondescription" : "Food & Cooking", "other" : [] },
+{ "levelid" : "One", "subjectid" : "EXP",  "subjectno" : "06", "lessondescription" : "Debriefing", "other" : [] },
+{ "levelid" : "One", "subjectid" : "EXP",  "subjectno" : "07", "lessondescription" : "Expedition Training Test", "other" : [] },
+{ "levelid" : "One", "subjectid" : "PT",  "subjectno" : "01", "lessondescription" : "One Star Physical Achievement Training", "other" : [] },
+{ "levelid" : "One", "subjectid" : "PT",  "subjectno" : "02", "lessondescription" : "One Star Physical Achievement Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "01", "lessondescription" : "Revise All Movements Taught up to & Including One Star Level", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "02", "lessondescription" : "Foot Drill - Changing Step in Quick time", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "03", "lessondescription" : "Foot Drill - Marking Time in Quick time", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "04", "lessondescription" : "Foot Drill - Left & Right Turns on the March", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "05", "lessondescription" : "Foot Drill -  Parading & Inspecting a Squad - Moving Off & Falling Out", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "06", "lessondescription" : "Foot Drill - Revision", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "07", "lessondescription" : "Foot Drill - Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "08", "lessondescription" : "Rifle Drill - The Positions of Attention, Stand At Ease & Stand Easy", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "09", "lessondescription" : "Rifle Drill - Change Arms From the Shoulder", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "10", "lessondescription" : "Rifle Drill - Slope Arms from the Shoulder & Visa Versa", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "11", "lessondescription" : "Rifle Drill - Ground Arms from the Slope & Visa Versa", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "12", "lessondescription" : "Rifle Drill - Present Arms from the Slope & Visa Versa", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "13", "lessondescription" : "Rifle Drill - Saluting at the Halt", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "14", "lessondescription" : "Rifle Drill - Saluting of the March", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "15", "lessondescription" : "Rifle Drill - Revision", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "DT",  "subjectno" : "16", "lessondescription" : "Rifle Drill- Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "01", "lessondescription" : "The History and Tradition of the Regiment you which you are Affiliated", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "02", "lessondescription" : "Military Knowledge Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "03", "lessondescription" : "Cadet GP Rifle - Aiming Off, Alterations of Sights & Miss Drills", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "04", "lessondescription" : "Cadet GP Rifle - Carriage of the Weapon & Reaction to Enemy Fire", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "05", "lessondescription" : "Cadet GP Rifle - Firing at Crossing and Multiple Targets", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "06", "lessondescription" : "Cadet GP Rifle - Boresighting the Rifle with Iron Sight", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "07", "lessondescription" : "Cadet GP Rifle - Zeroing the Rifle with Iron Sight", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "08", "lessondescription" : "Cadet GP Rifle - Revision", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "MK",  "subjectno" : "09", "lessondescription" : "Cadet GP Rifle - Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "SH",  "subjectno" : "01", "lessondescription" : "The Cadet GP Rifle Grouping Practise", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "SH",  "subjectno" : "02", "lessondescription" : "The Cadet GP Rifle Grouping Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "SH",  "subjectno" : "03", "lessondescription" : "The Air Rifle or .22 Rifle Grouping Practise", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "SH",  "subjectno" : "04", "lessondescription" : "The Air Rifle or .22 Rifle Grouping Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "NAV",  "subjectno" : "01", "lessondescription" : "Recognising the Shape of the Ground on Maps", "other" : ["Relief & Vertical Intervals","Introduction to the Lightweight Compass","Types of Bearings","Measuring Magnetic Bearings with a Lightweight Compass","Setting a Map with a Compass","Conversion of a Grid to Magnetic Bearing and Visa Versa","Preparation of a Route Card","Navigation Exercises by Day - Practise 1","Navigation Exercises by Day - Practise 2","Navigation Exercises by Day - Practise 3","Navigation Exercises by Day - Practise 4","Navigation Exercises by Day - Practise 5","Navigation Exercises by Day - Practise 6","Revision","Test"] },
+{ "levelid" : "Two", "subjectid" : "NAV",  "subjectno" : "02", "lessondescription" : "Recognising Prominent Features on the Ground & On Maps", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "NAV",  "subjectno" : "03", "lessondescription" : "Orientating a Map Using Prominent Features on the Ground", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "NAV",  "subjectno" : "04", "lessondescription" : "Orientating a Map Using a Compass", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "NAV",  "subjectno" : "05", "lessondescription" : "Checking the Direction of Handrails Using Compass & Map", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "NAV",  "subjectno" : "06", "lessondescription" : "Countryside Access Laws & Responsibilities", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "NAV",  "subjectno" : "07", "lessondescription" : "Planning a Route & Implementing a Route Plan", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "NAV",  "subjectno" : "08", "lessondescription" : "Navigation Practise", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "01", "lessondescription" : "keeping Direction at Night", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "02", "lessondescription" : "Individual Fire & Movement", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "03", "lessondescription" : "Operating as a Member of a Fire Team and Section", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "04", "lessondescription" : "Organisation and Grouping", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "05", "lessondescription" : "Patrolling - Planning and Preparation", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "06", "lessondescription" : "Patrolling - Conduct", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "07", "lessondescription" : "Battle Procedure, Functional Grouping and Orders", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "08", "lessondescription" : "Patrol Harbours", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "09", "lessondescription" : "Observation Posts", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FC",  "subjectno" : "10", "lessondescription" : "Fieldcraft Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "01", "lessondescription" : "Revision of CASAID", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "02", "lessondescription" : "Bone, Muscle and Joint Injuries (Treatment) - Spinal Injuries", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "03", "lessondescription" : "Asthma - Chest Pains", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "04", "lessondescription" : "Burns & Scalds - Electric Shock", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "05", "lessondescription" : "First Aid Kit - Fainting & Head Injuries", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "06", "lessondescription" : "Heat Exhaustion & Hypothermia", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "07", "lessondescription" : "Low Blood Sugar & Poisons", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "08", "lessondescription" : "Seizures & Severe Allergic Reactions", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "FA",  "subjectno" : "09", "lessondescription" : "First Aid Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "EXP",  "subjectno" : "01", "lessondescription" : "Training & Preparation for the Two Star Expedition", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "EXP",  "subjectno" : "02", "lessondescription" : "Expedition Training Test", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "PT",  "subjectno" : "01", "lessondescription" : "Two Star Physical Achievement Training", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "PT",  "subjectno" : "02", "lessondescription" : "Two Star Physical Achievement Testing", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "DT",  "subjectno" : "01", "lessondescription" : "Revise All Movements Taught up to & Including Two Star Level", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "DT",  "subjectno" : "02", "lessondescription" : "Words of Command & Directing Files", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "DT",  "subjectno" : "03", "lessondescription" : "Cane Drill", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "DT",  "subjectno" : "04", "lessondescription" : "Ceremonial Drill - Banner Guard", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "DT",  "subjectno" : "05", "lessondescription" : "Drilling a Squad - Practise", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "DT",  "subjectno" : "06", "lessondescription" : "Drill & Turnout Test", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "01", "lessondescription" : "Methods of Instruction", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "02", "lessondescription" : "Drill & Turnout/Military Knowledge Teaching Practise", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "03", "lessondescription" : "Skill At Arms Teaching Practise", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "04", "lessondescription" : "Map & Compass Teaching Practise", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "05", "lessondescription" : "Fiedcraft Teaching Practise", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "06", "lessondescription" : "Light Support Weapon - General Description, Safety & Sights", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "07", "lessondescription" : "Light Support Weapon - Stripping, Assembling and Cleaning & Basic Handling", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "08", "lessondescription" : "Light Support Weapon - Holding, Aiming & Firing in the Prone Position", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "09", "lessondescription" : "Light Support Weapon - Alteration of Sights, Selection and the use of Firing Positions", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "10", "lessondescription" : "Light Support Weapon - Mechanism, Immediate Actions & Stoppages", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "11", "lessondescription" : "Light Support Weapon - Boresightings & Zeroing the LSW with SUSAT", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "12", "lessondescription" : "Light Support Weapon - Practise", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "13", "lessondescription" : "Light Support Weapon - Test", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "MK",  "subjectno" : "14", "lessondescription" : "Cadet GP Rifle - Test", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "SH",  "subjectno" : "01", "lessondescription" : "", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "SH",  "subjectno" : "02", "lessondescription" : "", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "NAV",  "subjectno" : "01", "lessondescription" : "", "other" : ["Position Finding","Plotting Your Position","Setting a Compass for a Night March","Finding North by the Pole Star","Day & Night Navigation Exercise 1","Day & Night Navigation Exercise 2","Day & Night Navigation Exercise 3","Day & Night Navigation Exercise 4","Day & Night Navigation Exercise 5","Day & Night Navigation Exercise 6","Day & Night Navigation Exercise 7","Day & Night Navigation Exercise 8","Revision","Test"] },
+{ "levelid" : "Thr", "subjectid" : "NAV",  "subjectno" : "02", "lessondescription" : "", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "NAV",  "subjectno" : "03", "lessondescription" : "", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "NAV",  "subjectno" : "04", "lessondescription" : "", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "NAV",  "subjectno" : "05", "lessondescription" : "", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "NAV",  "subjectno" : "06", "lessondescription" : "", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "01", "lessondescription" : "Defence and Delay Operations", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "02", "lessondescription" : "Ambushes - Organisation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "03", "lessondescription" : "Ambushes - Planning and Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "04", "lessondescription" : "Ambushes - Conduct", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "05", "lessondescription" : "The Deliberate Attack", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "06", "lessondescription" : "Leadership - Tactical Principles. Leadership Organisation and Grouping", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "07", "lessondescription" : "Leadership - Issuing a Fire Controls Order", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "08", "lessondescription" : "Leadership - Battle Procedure, Functional Grouping and Orders", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "09", "lessondescription" : "Leadership - Patrolling (Planning and Preparation)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "10", "lessondescription" : "Leadership - Patrolling (Conduct)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "11", "lessondescription" : "Leadership - Patrol Harbours", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "12", "lessondescription" : "Leadership - Defence and Delay Operations", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "13", "lessondescription" : "Leadership - Observation Posts", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "14", "lessondescription" : "Leadership - Ambushes (Organisation)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "15", "lessondescription" : "Leadership - Ambushes (Planning and Preparation)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "16", "lessondescription" : "Leadership - Ambushes (Conduct)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "17", "lessondescription" : "Leadership - The Attack (Principles)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "18", "lessondescription" : "Leadership - The Attack (Fire & Manoeuvre)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "19", "lessondescription" : "Leadership - The Attack (Hasty Attack: Section Battle Drills)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "20", "lessondescription" : "Leadership - The Attack (Hasty Attack: Platoon Battle Drills)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "21", "lessondescription" : "Leadership - The Attack (The Deliberate Attack)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "22", "lessondescription" : "Leadership - The Attack (Advance to Contact)", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FC",  "subjectno" : "23", "lessondescription" : "Fieldcraft Test", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FA",  "subjectno" : "01", "lessondescription" : "Communication & Casualty Care - Severe Bleeding", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FA",  "subjectno" : "02", "lessondescription" : "Chest Pains & Choking", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FA",  "subjectno" : "03", "lessondescription" : "Resuscitation - Managing an Unconscious Casualty", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FA",  "subjectno" : "04", "lessondescription" : "Bites & Stings - Minor Bleeding", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FA",  "subjectno" : "05", "lessondescription" : "Minor Burns - Strain & Sprains", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FA",  "subjectno" : "06", "lessondescription" : "Fainting & Primary Survey", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "FA",  "subjectno" : "07", "lessondescription" : "First Aid Test", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "EXP",  "subjectno" : "01", "lessondescription" : "Training and Preparation for the Three Star Expedition", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "EXP",  "subjectno" : "02", "lessondescription" : "Expedition Training Test", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "PT",  "subjectno" : "01", "lessondescription" : "Three Star Physical Achievement Training", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "PT",  "subjectno" : "02", "lessondescription" : "Three Star Physical Achievement Test", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "PT",  "subjectno" : "03", "lessondescription" : "Training for a Four Star Progressive Subject", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "BE",  "subjectno" : "01", "lessondescription" : "Squadron Priority Weekend Preparation", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "BE",  "subjectno" : "02", "lessondescription" : "Squadron Priority Weekend Debrief", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "BE",  "subjectno" : "03", "lessondescription" : "Basic Training and Testing Weekend Preparation", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "BE",  "subjectno" : "04", "lessondescription" : "Basic Training and Testing Weekend Debrief", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "BE",  "subjectno" : "05", "lessondescription" : "Annual Camp Preparation", "other" : [] },
+{ "levelid" : "Basic", "subjectid" : "BE",  "subjectno" : "06", "lessondescription" : "Annual Camp Debrief", "other" : [] },
+{ "levelid" : "One", "subjectid" : "OE",  "subjectno" : "01", "lessondescription" : "Squadron Priority Weekend Preparation", "other" : [] },
+{ "levelid" : "One", "subjectid" : "OE",  "subjectno" : "02", "lessondescription" : "Squadron Priority Weekend Debrief", "other" : [] },
+{ "levelid" : "One", "subjectid" : "OE",  "subjectno" : "03", "lessondescription" : "Training & Testing Day Preparation", "other" : [] },
+{ "levelid" : "One", "subjectid" : "OE",  "subjectno" : "04", "lessondescription" : "Training & Testing Day Debrief", "other" : [] },
+{ "levelid" : "One", "subjectid" : "OE",  "subjectno" : "05", "lessondescription" : "NCO's Weekend Preparation", "other" : [] },
+{ "levelid" : "One", "subjectid" : "OE",  "subjectno" : "06", "lessondescription" : "NCO's Weekend Debrief", "other" : [] },
+{ "levelid" : "One", "subjectid" : "OE",  "subjectno" : "07", "lessondescription" : "Annual Camp Preparation", "other" : [] },
+{ "levelid" : "One", "subjectid" : "OE",  "subjectno" : "08", "lessondescription" : "Annual Camp Debrief", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "01", "lessondescription" : "Squadron Priority Weekend Preparation", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "02", "lessondescription" : "Squadron Priority Weekend Debrief", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "03", "lessondescription" : "Training & Testing Day Preparation", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "04", "lessondescription" : "Training & Testing Day Debrief", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "05", "lessondescription" : "Two Star First Aid Preparation", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "06", "lessondescription" : "Two Star First Aid Debrief", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "07", "lessondescription" : "NCO's Weekend Preparation", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "08", "lessondescription" : "NCO's Weekend Debrief", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "09", "lessondescription" : "Senior Field Weekend Preparation", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "10", "lessondescription" : "Senior Field Weekend Debrief", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "11", "lessondescription" : "Annual Camp Preparation", "other" : [] },
+{ "levelid" : "Two", "subjectid" : "TE",  "subjectno" : "12", "lessondescription" : "Annual Camp Debrief", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "01", "lessondescription" : "Squadron Priority Weekend Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "02", "lessondescription" : "Squadron Priority Weekend Debrief", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "03", "lessondescription" : "Training & Testing Day Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "04", "lessondescription" : "Training & Testing Day Debrief", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "05", "lessondescription" : "Junior Cadet Instructors Cadre Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "06", "lessondescription" : "Junior Cadet Instructors Cadre Debrief", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "07", "lessondescription" : "Three Star Cadre Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "08", "lessondescription" : "Three Star Cadre Debrief", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "09", "lessondescription" : "Three Star Drill & First Aid Weekend Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "10", "lessondescription" : "Three Star Drill & First Aid Weekend Debrief", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "11", "lessondescription" : "NCO's Weekend Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "12", "lessondescription" : "NCO's Weekend Debrief", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "13", "lessondescription" : "Senior Field Weekend Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "14", "lessondescription" : "Senior Field Weekend Debrief", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "15", "lessondescription" : "Annual Camp Preparation", "other" : [] },
+{ "levelid" : "Thr", "subjectid" : "THE",  "subjectno" : "16", "lessondescription" : "Annual Camp Debrief", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "01", "lessondescription" : "Squadron Priority Weekend Preparation", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "02", "lessondescription" : "Squadron Priority Weekend Debrief", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "03", "lessondescription" : "Training & Testing Day Preparation", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "04", "lessondescription" : "Training & Testing Day Debrief", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "05", "lessondescription" : "Senior Cadet Instructors Cadre Preparation", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "06", "lessondescription" : "Senior Cadet Instructors Cadre Debrief", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "07", "lessondescription" : "Four Star Cadre Preparation", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "08", "lessondescription" : "Four Star Cadre Debrief", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "09", "lessondescription" : "Advanced First Aid Weekend Preparation", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "10", "lessondescription" : "Advanced First Aid Weekend Debrief", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "11", "lessondescription" : "NCO's Weekend Preparation", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "12", "lessondescription" : "NCO's Weekend Debrief", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "13", "lessondescription" : "Senior Field Weekend Preparation", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "14", "lessondescription" : "Senior Field Weekend Debrief", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "15", "lessondescription" : "Annual Camp Preparation", "other" : [] },
+{ "levelid" : "Fou", "subjectid" : "FE",  "subjectno" : "16", "lessondescription" : "Annual Camp Debrief", "other" : [] }
+] );
+} catch (e) {
+  print (e);
+};
+
+try {
+	db.subjects.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+  db.subjects.insertMany( [
+{ "description" : "Basic Drill & Turnout", "oldsubjectid" : "BasicDrillAndTurnout", "newid" : "Basic-DT" },
+{ "description" : "Basic Military Knowledge", "oldsubjectid" : "BasicMilitaryKnowledge", "newid" : "Basic-MK" },
+{ "description" : "Basic Skill At Arms", "oldsubjectid" : "BasicSkillAtArms", "newid" : "Basic-SAA" },
+{ "description" : "Basic Shooting", "oldsubjectid" : "BasicShooting", "newid" : "Basic-SH" },
+{ "description" : "Basic Navigation", "oldsubjectid" : "BasicNavigation", "newid" : "Basic-NAV" },
+{ "description" : "Basic Fieldcraft", "oldsubjectid" : "BasicFieldcraft", "newid" : "Basic-FC" },
+{ "description" : "Basic First Aid", "oldsubjectid" : "BasicFirstAid", "newid" : "Basic-FA" },
+{ "description" : "Basic Expedition Training", "oldsubjectid" : "BasicExpeditionTraining", "newid" : "Basic-EXP" },
+{ "description" : "Basic Physical Achievement", "oldsubjectid" : "BasicPhysicalAchievement", "newid" : "Basic-PT" },
+{ "description" : "Basic Event", "oldsubjectid" : "BasicEvent", "newid" : "Basic-BE" },
+{ "description" : "Weapon Handling Test", "oldsubjectid" : "WHT", "newid" : "Basic-WHT" },
+{ "description" : "Non Syllabus Event", "oldsubjectid" : "Custom2", "newid" : "Basic-NSE" },
+{ "description" : "Detachment Closed", "oldsubjectid" : "DetachmentClosed", "newid" : "Basic-DC" },
+{ "description" : "One Star Drill & Turnout", "oldsubjectid" : "OneDrillAndTurnout", "newid" : "One-DT" },
+{ "description" : "One Star Military Knowledge", "oldsubjectid" : "OneMilitaryKnowledge", "newid" : "One-MK" },
+{ "description" : "One Star Skill At Arms", "oldsubjectid" : "OneSkillAtArms", "newid" : "One-SAA" },
+{ "description" : "One Star Shooting", "oldsubjectid" : "OneShooting", "newid" : "One-SH" },
+{ "description" : "One Star Navigation", "oldsubjectid" : "OneNavigation", "newid" : "One-NAV" },
+{ "description" : "One Star Map & Compass", "oldsubjectid" : "OneMapCompass", "newid" : "One-MC" },
+{ "description" : "One Star Fieldcraft", "oldsubjectid" : "OneFieldcraft", "newid" : "One-FC" },
+{ "description" : "One Star First Aid", "oldsubjectid" : "OneFirstAid", "newid" : "One-FA" },
+{ "description" : "One Star Expedition Training", "oldsubjectid" : "OneExpeditionTraining", "newid" : "One-EXP" },
+{ "description" : "One Star Physical Achievement", "oldsubjectid" : "OnePhysicalAchievement", "newid" : "One-PT" },
+{ "description" : "One Star Event", "oldsubjectid" : "OneEvent", "newid" : "One-OE" },
+{ "description" : "Weapon Handling Test", "oldsubjectid" : "WHT", "newid" : "One-WHT" },
+{ "description" : "Non Syllabus Event", "oldsubjectid" : "Custom2", "newid" : "One-NSE" },
+{ "description" : "Detachment Closed", "oldsubjectid" : "DetachmentClosed", "newid" : "One-DC" },
+{ "description" : "Two Star Drill & Turnout", "oldsubjectid" : "TwoDrillAndTurnout", "newid" : "Two-DT" },
+{ "description" : "Two Star Military Knowledge", "oldsubjectid" : "TwoMilitaryKnowledge", "newid" : "Two-MK" },
+{ "description" : "Two Star Skill At Arms", "oldsubjectid" : "TwoSkillAtArms", "newid" : "Two-SAA" },
+{ "description" : "Two Star Shooting", "oldsubjectid" : "TwoShooting", "newid" : "Two-SH" },
+{ "description" : "Two Star Navigation", "oldsubjectid" : "TwoNavigation", "newid" : "Two-NAV" },
+{ "description" : "Two Star Map & Compass", "oldsubjectid" : "TwoMapCompass", "newid" : "Two-MC" },
+{ "description" : "Two Star Fieldcraft", "oldsubjectid" : "TwoFieldcraft", "newid" : "Two-FC" },
+{ "description" : "Two Star First Aid", "oldsubjectid" : "TwoFirstAid", "newid" : "Two-FA" },
+{ "description" : "Two Star Expedition Training", "oldsubjectid" : "TwoExpeditionTraining", "newid" : "Two-EXP" },
+{ "description" : "Two Star Physical Achievement", "oldsubjectid" : "TwoPhysicalAchievement", "newid" : "Two-PT" },
+{ "description" : "Two Star Event", "oldsubjectid" : "TwoEvent", "newid" : "Two-TE" },
+{ "description" : "Weapon Handling Test", "oldsubjectid" : "WHT", "newid" : "Two-WHT" },
+{ "description" : "Non Syllabus Event", "oldsubjectid" : "Custom2", "newid" : "Two-NSE" },
+{ "description" : "Detachment Closed", "oldsubjectid" : "DetachmentClosed", "newid" : "Two-DC" },
+{ "description" : "Three Star Drill & Turnout", "oldsubjectid" : "ThreeDrillAndTurnout", "newid" : "Thr-DT" },
+{ "description" : "Three Star Junior Cadet Instructors Cadre", "oldsubjectid" : "ThreeJCIC", "newid" : "Thr-JCIC" },
+{ "description" : "Three Star Skill At Arms", "oldsubjectid" : "ThreeSkillAtArms", "newid" : "Thr-SAA" },
+{ "description" : "Three Star Shooting", "oldsubjectid" : "ThreeShooting", "newid" : "Thr-SH" },
+{ "description" : "Three Star Navigation", "oldsubjectid" : "ThreeNavigation", "newid" : "Thr-NAV" },
+{ "description" : "Three Star Map & Compass", "oldsubjectid" : "ThreeMapCompass", "newid" : "Thr-MC" },
+{ "description" : "Three Star Fieldcraft", "oldsubjectid" : "ThreeFieldcraft", "newid" : "Thr-FC" },
+{ "description" : "Three Star First Aid", "oldsubjectid" : "ThreeFirstAid", "newid" : "Thr-FA" },
+{ "description" : "Three Star Expedition Training", "oldsubjectid" : "ThreeExpeditionTraining", "newid" : "Thr-EXP" },
+{ "description" : "Three Star Physical Achievement", "oldsubjectid" : "ThreePhysicalAchievement", "newid" : "Thr-PT" },
+{ "description" : "Three Star Event", "oldsubjectid" : "ThreeEvent", "newid" : "Thr-THE" },
+{ "description" : "Weapon Handling Test", "oldsubjectid" : "WHT", "newid" : "Thr-WHT" },
+{ "description" : "Non Syllabus Event", "oldsubjectid" : "Custom2", "newid" : "Thr-NSE" },
+{ "description" : "Detachment Closed", "oldsubjectid" : "DetachmentClosed", "newid" : "Thr-DC" },
+{ "description" : "Four Star Progressive Subject", "oldsubjectid" : "FourProgressive", "newid" : "Fou-FE" },
+{ "description" : "Non Syllabus Event", "oldsubjectid" : "Custom2", "newid" : "Custom2-NSE" }
+] );
+} catch (e) {
+  print (e);
+};
+
+try {
+	db.levels.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+	db.levels.insertMany( [
+	{ "levelid" : "Basic", "leveldescription" : "Basic" },
+	{ "levelid" : "One", "leveldescription" : "OneStar" },
+	{ "levelid" : "Two", "leveldescription" : "TwoStar" },
+	{ "levelid" : "The", "leveldescription" : "ThreeStar" },
+	{ "levelid" : "Fou", "leveldescription" : "FourStar" },
+	{ "levelid" : "Custom", "leveldescription" : "Custom1" }
+] );
+} catch (e) {
+  print (e);
+};
+
+try {
+	db.detachments.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+	db.detachments.insertMany( [
+	{ "detachmentid" : "DC", "description" : "Detachment Closed" },
+	{ "detachmentid" : "L98A2", "description" : "L98A2 Cadet General Purpose Rifle" },
+	{ "detachmentid" : "L86A2", "description" : "L86A2 Light Support Weapon" },
+	{ "detachmentid" : "BSA177SAR", "description" : "BSA .177 Scorpion Air Rifle" },
+	{ "detachmentid" : "NO822R", "description" : "No.8 .22 Rifle" },
+	{ "detachmentid" : "762TR", "description" : "7.62 Target Rifle" }
+] );
+} catch (e) {
+  print (e);
+};
+
+try {
+	db.schedule.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+	db.schedule.insertMany( [
+	{ "detachmentid" : "L98A2", "levelid" : "One", "lesson1id" : "One-SAA-09", "lesson1tutorid" : "smissmith@somewhere.com", "lesson2id" : "One-DT-01", "lesson2tutorid" : "smissmith@somewhere.com", "date" : "", "equipmentcode": ["GPR", "LSW"], "dresscode" : ["MTP", "CIV"] }
+] );
+} catch (e) {
+  print (e);
+};
+
+try {
+	db.dress.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+	db.dress.insertMany( [
+	{ "dresscode" : "MTP", "description" : "Multi-Terrain Pattern" },
+	{ "dresscode" : "CIV", "description" : "Civvis" },
+	{ "dresscode" : "SKT", "description" : "Sports Kit" },
+	{ "dresscode" : "GTX", "description" : "Gortex" }
+] );
+} catch (e) {
+  print (e);
+};
+
+
+try {
+	db.equipment.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+	db.equipment.insertMany( [
+	{ "equipmentcode" : "GPR", "description" : "L98A2 General Purpose Rifle" },
+	{ "equipmentcode" : "LSW", "description" : "L86A2 Light Support Weapon" }
+	
+] );
+} catch (e) {
+  print (e);
+};
+
+try {
+	db.users.deleteMany( {} );
+} catch (e) {
+print (e);
+}
+
+try {
+	db.users.insertMany( [
+	{ "rank" : "SMI", "firstname" : "Smith", "lastname" : "Smith", "email" : "smissmith@somewhere.com", "role": "", "password" : "" },
+	{ "rank" : "SSI", "firstname" : "Jones", "lastname" : "Jones", "email" : "jonesjones@somewhere.com", "role": "", "password" : "" },
+	{ "rank" : "SI", "firstname" : "Snooks", "lastname" : "Snooks", "email" : "snookssnooks@somewhere.com", "role": "", "password" : "" },
+	{ "rank" : "CDT CPL", "firstname" : "Bob", "lastname" : "Hoskins", "email" : "bobhoskins@somewhere.com", "role": "", "password" : "" },
+	{ "rank" : "CDT L/CPL", "firstname" : "Roger", "lastname" : "Daltry", "email" : "rogerdaltry@somewhere.com", "role": "", "password" : "" }
+] );
+} catch (e) {
+  print (e);
+};
+

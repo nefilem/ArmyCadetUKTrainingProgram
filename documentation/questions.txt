@@ -1,0 +1,26 @@
+User
+	- Any user can get a printout, I propose to have the backend create a pdf file that is returned to the browser using react-pdfkit.
+
+Instructor/Cadet NCO
+	- Can view the details for any of the upcoming training days.
+
+Cadet
+	- Can view the details for any of the upcoming training days ONLY for the cadets star level.
+
+Parent
+	- Can view the details for any of the upcoming training days ONLY for their childs star level?
+
+Training Officer
+	- 
+
+Detachment Commander
+	-
+
+
+
+User registration/Login
+ - Do users need to login or do they select their role from a drop down list? 
+ - Do we need to provide any sort of registration functionality to the front end? 
+   Or will this be entered manually as per the training session data?
+
+ 
