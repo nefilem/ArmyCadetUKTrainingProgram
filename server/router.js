@@ -1,14 +1,11 @@
 const express = require('express');
 const router = express.Router();
-//const eventsdb = require('./eventsDBController');
+//const pdfkitapp = require('./pdfkitapp.js');
 const usersinfo = require('./usersController');
 const scheduleinfo = require('./scheduleController');
 const lessonsinfo = require('./lessonsController');
-//const configinfo = require("./configController");
-//const { ScheduleDB } = require('./models/ScheduleDB');
 
-//const baseurl = "/EventsDB";
-//const userbaseurl = "/userInfo";
+const PDFDocument = require("pdfkit");
 
 const schedulebaseurl = "/schedule";
 const lessonsbaseurl = "/lessons";
@@ -22,20 +19,30 @@ router.get(usersbaseurl, usersinfo.index);
 router.get(lessonsbaseurl, lessonsinfo.index);
 
 // schedule
+router.get(schedulebaseurl + '/generatepdf', async function(req, res, next) {
+    var myDoc = new PDFDocument({bufferPages: true});
+    
+    let buffers = [];
+    myDoc.on('data', buffers.push.bind(buffers));
+    myDoc.on('end', () => {
+    
+        let pdfData = Buffer.concat(buffers);
+        res.writeHead(200, {
+        'Content-Length': Buffer.byteLength(pdfData),
+        'Content-Type': 'application/pdf',        
+        'Content-disposition': 'inline;filename=test.pdf',})        
+        .end(pdfData);    
+
+        ////'Content-disposition': 'attachment;filename=test.pdf',})
+    });
+    
+    myDoc.font('Times-Roman')
+         .fontSize(12)
+         .text(`this is a test text`);
+    myDoc.end();
+    });
 router.post(schedulebaseurl + "/createschedule", scheduleinfo.create);
 router.post(schedulebaseurl + "/getschedule", scheduleinfo.getschedule);
 router.get(schedulebaseurl, scheduleinfo.index);
-
-//router.post(baseurl + '/create', eventsdb.create);
-//router.put(baseurl + '/:id', eventsdb.update);
-//router.get(baseurl + '/getRandomEvents', eventsdb.getRandomEvents)
-//router.get(baseurl + '/search/:field/:value', eventsdb.search);
-//router.get(baseurl + '/:id',eventsdb.show);
-//router.get(baseurl, eventsdb.index);
-//router.delete(baseurl + '/deleteAll', eventsdb.deleteAll);
-//router.delete(baseurl + '/:id', eventsdb.delete);
-
-//router.post(userbaseurl + "/register", userinfo.register);
-//router.post(userbaseurl + "/login", userinfo.login);
 
 module.exports = router;
