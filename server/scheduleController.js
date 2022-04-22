@@ -5,6 +5,7 @@ const { ConfigDB } = require('./models/ConfigDB');
 const createError = require('http-errors');
 const { response } = require('express');
 const { LessonsDB } = require('./models/LessonsDB');
+//const PdfPrinter = require('pdfmake');
 
 /**
  * Returns a list of all schedules from the DB
@@ -208,6 +209,50 @@ exports.getschedule = async function (req, res) {
     //res.send(scheduleInfo);
    // }
 }
+
+exports.pdfschedule = async (email) => {
+
+    return prom = new Promise((resolve, reject) => {
+        const schedules = [];
+        getSchedules(schedules, email).
+        then((response) => {
+            //console.log("zz",response);        
+            resolve(response);
+        });
+    });
+}
+
+
+// exports.genpdf = async function(req, res, next) {
+//     var fonts = {
+//       Helvetica: {
+//           normal: 'Helvetica',
+//           bold: 'Helvetica-Bold',
+//           italics: 'Helvetica-Oblique',
+//           bolditalics: 'Helvetica-BoldOblique'
+//     }};
+//     var printer = new PdfPrinter(fonts);
+//     var docDefinition = {
+//       content: [
+//           'First paragraph',
+//           'Another paragraph, this time a little bit longer to make sure,'+ 
+//              ' this line will be divided into at least two lines'
+//       ],
+//       defaultStyle: {
+//           font: 'Helvetica'
+//       }
+//     };
+//     var pdfDoc = printer.createPdfKitDocument(docDefinition);
+  
+//     return new Promise((resolve, reject) =>{ try {
+//       var chunks = [];
+//       pdfDoc.on('data', chunk => chunks.push(chunk));
+//       pdfDoc.on('end', () => resolve(Buffer.concat(chunks)));
+//       pdfDoc.end();
+//     } catch(err) {
+//       reject(err);
+//     }});
+//   };
 
 exports.create = async function (req,res,next){
 
