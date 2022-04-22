@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { Carousel } from "react-bootstrap";
 import './home.css';
-import {MdOutlineArrowForwardIos} from 'react-icons/md';
+import arrow from '../images/arrow.png';
 
 export default class Home extends Component {
   render() {
@@ -70,7 +70,8 @@ export default class Home extends Component {
       <div>
         <Row>
           
-    <div className="description"><h2>This project allows the creation of a monthly training program.</h2> <p>The program creation is controlled allowing only the selection of lessons available within a subject area at the selected level.
+    <div className="description">
+      <h2>This project allows the creation of a monthly training program.</h2> <p>The program creation is controlled allowing only the selection of lessons available within a subject area at the selected level.
 To extend the project the different types of access to the resulting program and who is able to create a program can be tackled.
 The Army Cadet Force is an MOD sponsored youth organisation who run military themed training for 12-18 year olds. Cadets can Earn nationally recognised qualifications along side the ACF syllabus.
 There are a number of subjects in the syllabus each with a number of lessons. There are different levels of training that progress in difficulty. Not all subjects are covered at each level.
