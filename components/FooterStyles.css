@@ -1,0 +1,123 @@
+/* footer CSS */
+
+
+
+.flex-container {
+    display: flex;
+    height: 200px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    align-content: bottom;
+    background-color: #f1f1f1;
+    
+    position: relative;
+    
+    top: calc( 50vh - 50px );
+  }
+  .logo {
+    background-color: #262b27;
+    width: 20%;
+    margin: 1px;
+    justify-content: center;    
+    font-size: 30px;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid lightblue;   
+    
+  }
+  .logo img{
+    max-width: 70%;
+  }
+  .footerIcons {
+    background-color: #262b27;
+    width: 20%;
+    margin: 1px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    color: #f1f1f1;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;   
+    
+  }
+  .footerMain {
+    background-color: #262b27;
+    width: 60%;
+    margin: 1px;
+    text-align: left;
+    line-height: 35px;/* footer CSS */
+  }
+
+.flex-container {
+  display: flex;
+  height: 200px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  align-content: bottom;
+  background-color: #f1f1f1;
+}
+.logo {
+  background-color: #262b27;
+  width: 20%;
+  margin: 1px;
+  justify-content: center;  
+  font-size: 30px;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid lightblue;  
+  
+}
+.logo img{
+  max-width: 70%;
+}
+.footerIcons {
+  background-color: #262b27;
+  width: 20%;
+  margin: 1px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  color: #f1f1f1;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;  
+  
+}
+.footerMain {
+  background-color: #262b27;
+  width: 60%;
+  margin: 1px;
+  text-align: left;
+  line-height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  
+}
+.footerMain li {
+  display: inline-block;
+  color: #f1f1f1;
+}
+.footerMain li:before{
+  content: '\00a0\2022\00a0\00a0';
+}
+.footerMain li:first-child:before{
+  content: '';
+}
+
+  
+  .footerMain li {
+    display: inline-block;
+    color: #f1f1f1;
+  }
+  .footerMain li:before{
+    content: '\00a0\2022\00a0\00a0';
+  }
+  .footerMain li:first-child:before{
+    content: '';
+  }
