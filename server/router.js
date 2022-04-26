@@ -22,6 +22,8 @@ const configbaseurl = "/config";
     //localStorage.setItem('x-access-token', response.data.token);
     //localStorage.setItem('x-access-token-expiration', Date.now() + 2 * 60 * 60 * 1000);
 //})
+router.post(usersbaseurl + '/register', usersinfo.register)
+router.post(usersbaseurl + '/login', usersinfo.login)
 router.post(usersbaseurl + '/showfiltered', usersinfo.showFiltered);
 router.get(usersbaseurl, usersinfo.index);
 
