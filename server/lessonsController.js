@@ -7,6 +7,17 @@ const createError = require('http-errors');
  * @param  {} req
  * @param  {} res
  */
+ exports.showFiltered = async function (req, res) {
+    // return all data from mongodb    
+    LessonsDB.find( req.body.filters )
+     .then( (lessonitems) => res.send(lessonitems));
+ }
+
+ exports.subjectsByLevel = async function (req, res) {
+   LessonsDB.find( { "levelid" : req.params.level } ).distinct('subject')
+   .then( (lessonitems) => res.send(lessonitems));
+ }
+
  exports.index = async function (req,res) {
 
     // return all data from mongodb

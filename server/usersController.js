@@ -2,6 +2,11 @@ const { ObjectId } = require('mongodb');
 const { UsersDB }  = require('./models/UsersDB');
 const bcrypt = require('bcrypt');
 const createError = require('http-errors');
+const jwt = require('jsonwebtoken');
+
+// Config for jsonwebtoken token creation
+const secretPassword = "ABC123";
+const expiryLength = { expiresIn: '24h' };
 
 exports.register = async function(req, res, next) {
 
@@ -10,7 +15,7 @@ exports.register = async function(req, res, next) {
     const sHashedPw = await bcrypt.hash(req.body.password, 12);
     const sAdminUser = (req.body.adminUser === undefined || req.body.adminUser === null || req.adminUser === false)?false:true;
 
-    console.log("hashedPw", sHashedPw);
+    //console.log("hashedPw", sHashedPw);
 
      //setup object to save back to mongodb database
     const user = new UsersDB({
@@ -31,6 +36,13 @@ exports.register = async function(req, res, next) {
     });        
 };
 
+exports.showFiltered = async function (req,res) {
+
+    // return all data from mongodb
+    UsersDB.find( req.body.filters )
+     .then( (subjectitems) => res.send(subjectitems));
+}
+
 exports.index = async function (req,res) {
 
     // return all data from mongodb
@@ -50,8 +62,12 @@ exports.login = async function(req, res, next) {
     .then(async (response) => {
         matchStatus = await bcrypt.compare(sPassword, response.hashedPw);
         if (matchStatus===true) {
+            let tokenPayload = { name: sUsername, password: sPassword };
+
+            let jwtToken = jwt.sign(tokenPayload, secretPassword, expiryLength);
+            
             console.log("Successfully logged in:", response);
-            res.send({result:true, loggedIn:true, adminUser: Boolean(response.adminUser)});
+            res.send({result:true, loggedIn:true, adminUser: Boolean(response.adminUser), token: jwtToken});
         } else {
             res.send({result:true, loggedIn:false, adminUser: false});
         }

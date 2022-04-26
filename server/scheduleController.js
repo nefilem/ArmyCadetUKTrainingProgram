@@ -19,6 +19,13 @@ const { LessonsDB } = require('./models/LessonsDB');
      .then( (scheduleitems) => res.send(scheduleitems));
 }
 
+exports.showFiltered = async function (req,res) {
+
+    // return all data from mongodb
+    ScheduleDB.find( req.body.filters )
+     .then( (scheduleitems) => res.send(scheduleitems));
+}
+
 getASchedule = async function(levelID) {
 
     //return await ScheduleDB.find( { levelid: levelID });    

@@ -18,12 +18,20 @@ const usersbaseurl = "/users";
 const configbaseurl = "/config";
 
 // users
+//router.post(usersbaseurl + '/auth/', {
+    //localStorage.setItem('x-access-token', response.data.token);
+    //localStorage.setItem('x-access-token-expiration', Date.now() + 2 * 60 * 60 * 1000);
+//})
+router.post(usersbaseurl + '/showfiltered', usersinfo.showFiltered);
 router.get(usersbaseurl, usersinfo.index);
 
 // lessons
+router.post(lessonsbaseurl + '/showfiltered', lessonsinfo.showFiltered);
+router.get(lessonsbaseurl + '/subjectsbylevel/:level', lessonsinfo.subjectsByLevel);
 router.get(lessonsbaseurl, lessonsinfo.index);
 
 // schedule
+router.post(schedulebaseurl + '/showfiltered', scheduleinfo.showFiltered);
 router.post(schedulebaseurl + '/genpdf', async (req, res, next) => { 
 try {
         await createpdf(req)
@@ -137,4 +145,6 @@ async function createpdf(req) {
     }});
   };
 
+
+  
 module.exports = router;

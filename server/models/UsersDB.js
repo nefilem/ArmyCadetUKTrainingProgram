@@ -1,4 +1,10 @@
 const mongoose = require('mongoose');
+// Role 0 - administrator (Commander)
+//      1 - (default) user
+//      2 - instructor
+//      3 - 
+//      4 -
+//      5 -
 
 const usersDBSchema = mongoose.Schema({
     rank: {
@@ -32,7 +38,7 @@ const usersDBSchema = mongoose.Schema({
     },
     role: {
         type: String,
-        default: 'user'        
+        default: '1'        
     },
     children: {
         type: Array,
