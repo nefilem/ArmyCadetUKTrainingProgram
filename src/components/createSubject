@@ -1,0 +1,56 @@
+import React, { useState } from "react";
+import { ApiClient } from '../apiClient';
+
+
+
+
+function AddSubject(props) {
+
+    const client = new ApiClient()
+  const [disabled, cDisabled] = useState(false);
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    cDisabled(true);
+    let result;
+    
+      result = props.client.addsubjectData(e.target.addsubjectData.value);
+    
+    result
+      .then(() => {
+        cDisabled(false);
+        document.getElementById("addForm").reset();
+        props.refreshList();
+      })
+      .catch(() => {
+        alert("an error occured, please try again");
+        cDisabled(false);
+      });
+  };
+
+  return (
+    <>
+      {props.subjectData ? "Update" : "Add"}
+      <br />
+
+      <form onSubmit={(e) => submitHandler(e)} id="addForm">
+        Subjrct Name: <br />
+        <input
+          type="text"
+          
+          name="subjectData"
+          disabled={disabled}
+        />
+        
+        <br />
+        <br />
+        <button type="submit" disabled={disabled}>
+          {" "}
+          Submit{" "}
+        </button>
+      </form>
+    </>
+  );
+}
+
+export default AddSubject;
