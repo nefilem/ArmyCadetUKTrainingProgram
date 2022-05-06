@@ -1,0 +1,103 @@
+td, th {
+  border: 1px solid black;
+  padding: 8px;
+}
+.pdf{
+  width:50%;
+  height: 150px;
+  background-color: #262b27;
+  font-family: Arial,sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  border-top: 10px solid yellow;
+  margin-top: 50px;
+}
+.main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(0 78 66);
+}
+.form{
+  
+  background-color: white;
+  box-shadow: #262b27 6px;
+  color: #262b27;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.form h3, h2, label{
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn_edit{
+  background-color: #262b27;
+  color: #fff;
+  text-transform: uppercase;
+  width: auto;
+  text-decoration: none;
+  outline: none;
+  
+  margin-right: 5px;
+}
+.btn_edit Link{
+  text-decoration: none;
+  background-color: #262b27;
+}
+.btn_delete{
+  background-color: red;
+  color:#fff;
+  outline: none;
+  text-transform: uppercase;
+}
+.form img{
+  width: 25%;
+  align-self:left;
+}
+
+.formEdit{
+  background-color: #fff;
+  width: 100vh;
+  color: #262b27;
+  display: flex;
+  left: 0px;
+  right: 0px;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.formEdit .text1 .text{
+outline: 1px solid transparent;
+}
+.formEdit .text1 .text:focus{
+  outline: 3px solid yellow;
+
+}
+.text1{
+  margin: 20px;
+  font-weight:700;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.btn_create{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.heading{
+  background-color: #262b27;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.arrow{
+	align-self: flex-start;
+	
+	color: yellow;
+}

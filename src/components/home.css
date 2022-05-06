@@ -1,0 +1,104 @@
+.icon{
+    width: 50px;
+    height:100px;
+
+    color: yellow;
+}
+.description{
+    
+    font-family:arial,sans-serif;
+    line-height: 1.4;
+    color: darkgreen;
+	width:50%;
+   margin:auto;
+   padding-top: 50px;
+   background-image: url(../images/arrow.png) ;
+   background-repeat: no-repeat;
+   background-position: left top;
+   background-size: 300px 300px;
+   
+   
+    }
+
+	.description p{
+		font-size: 20px;
+		text-align: left;
+		
+	}
+	
+
+	
+	
+.title{
+    position: absolute;
+  z-index: 1;
+  justify-items: center;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  
+}
+
+  
+  .title h2{
+     
+      line-height: 1.1;
+    font-family: Neo Sans W01,Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.625rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+  
+
+.arrow-4 {
+	/* duplicate the triange */
+    
+	position: relative;
+	height: 0px; width: 0px;
+	border: 13px solid;
+	border-color: 
+		yellow
+		yellow
+		transparent
+		transparent;
+	transform: rotate(45deg); 
+}
+.arrow-4:before, .arrow-4:after {
+	content: '';
+	display: block;
+	position: absolute;
+	
+	/* set up more triangles */
+	height: 0; width: 0;
+	
+	/* half the parent border
+	   rounded up */
+	border: 10px solid;	
+}
+
+.arrow-4:before {
+	border-color:
+		yellow
+		transparent
+		transparent
+		yellow;
+	display: block;
+	top: -1px; right: 0px;
+	transform-origin: top right;
+	transform: rotate(45deg); 
+}
+
+.arrow-4:after {
+	border-color:
+		transparent
+		yellow
+		yellow
+		transparent;
+	top: 0px; right: -1px;
+	transform-origin: top right;
+	transform: rotate(-45deg);
+}
