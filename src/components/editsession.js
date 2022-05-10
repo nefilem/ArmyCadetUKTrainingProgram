@@ -4,17 +4,16 @@
 // import { Link } from "react-router-dom";
 // import html2canvas from 'html2canvas';
 // import { jsPDF } from 'jspdf';
- import './tabledata.css';
+// import './tabledata.css';
 // import Button from 'react-bootstrap/Button';
 // import axios from 'axios';
 // //import { ObjectId } from 'mongodb';
-
 // class EditUser extends React.Component {
   
-// 	// Constructor for month training
-// 	constructor(props) {
-// 		super(props);
-// 		this.state = {			
+//  // Constructor for month training
+//  constructor(props) {
+//      super(props);
+//      this.state = {          
 //       _id : "",
 //       email: "",
 //       originalemail: "",
@@ -25,9 +24,9 @@
 //       level: [],
 //       password: "",
 //       children: [],
-// 			DataisLoaded: false
-// 		};
-// 	}
+//          DataisLoaded: false
+//      };
+//  }
   
 //   handleChange(event) {
 //     const newState = {...this.state};        
@@ -62,13 +61,12 @@
 //         DataisLoaded: newState.DataisLoaded
 //         //items: newState.items,
 //         //DataisLoaded: newState.DataisLoaded
-// 			})      
+//          })      
 //       console.log("state",this.state);
 //       // .catch((error) => {
 //       //   console.log(error);
 //       // })
 //   }
-
 //   postItems(url, dataToPost) {
 //     //console.log("dataToPost", dataToPost);
 //     return axios
@@ -78,7 +76,6 @@
 //        console.log(error);
 //     });
 //   }
-
 //   submitHandler = (e) => {
 //     e.preventDefault();  
 //     /*let errorText = [];
@@ -94,7 +91,6 @@
 //         //props.amendList(state.id, state.name, state.location, state.datetime, state.precis, state.creator);
 //         // 0 above is creator, needs to change for authorisation functionality
 //         //toastr.success("Your post was added!", "Success");
-
 //         // need to navigate back to the view screen now
 //         //navigate("/view");
 //     } */
@@ -114,16 +110,15 @@
 //                 });
                 
 // }    
-
-// 	// ComponentDidMount for
-// 	// fetch from db
-// 	componentDidMount() {
+//  // ComponentDidMount for
+//  // fetch from db
+//  componentDidMount() {
 //     if (this.state.DataisLoaded === false) {
 //     this.postItems("https://kgtrainingserver.herokuapp.com/users/showfiltered", 
 //                    { "filters": { "email": this.props.emailID } })
 //     .then((response) => {
 //       console.log("state",response.data[0])
-// 			this.setState({        
+//          this.setState({        
 //         _id : response.data[0].id,
 //         email: response.data[0].email,
 //         originalemail: response.data[0].email,
@@ -135,24 +130,23 @@
 //         password: response.data[0].password,
 //         children: response.data[0].children,
 //         DataisLoaded: true
-// 			})        
+//          })        
 //      })
 //    }
 //   }
-// // 		fetch(
+// //       fetch(
 // // "https://kgtrainingserver.herokuapp.com/users/showfiltered", { "filters": { "email": this.props.email } } )
-// // 			.then((res) => res.json())
-// // 			.then((json) => {
+// //           .then((res) => res.json())
+// //           .then((json) => {
 // //         console.log(json)
-// // 				this.setState({
-// // 					items: json,
-// // 					DataisLoaded: true
-// // 				});
-// // 			})
-
-// 	render() {
+// //               this.setState({
+// //                   items: json,
+// //                   DataisLoaded: true
+// //               });
+// //           })
+//  render() {
 //     //console.log("pigbob",this.state.items);
-// 		return (
+//      return (
 //       <div class="form-wrapper">
 //       <Form onSubmit={ (e) => this.submitHandler(e) }>
 //         <Form.Group controlId="email">
@@ -192,22 +186,20 @@
 //         </Button>
 //       </Form>
 //     </div>
-//   );	
+//   ); 
 // }
 // }
-
 // export default EditUser;
 import React, { Component, useState, useEffect } from "react";
 import Form from 'react-bootstrap/Form'
 import Container from 'react-bootstrap/Container'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import Footer from './Footer'
+import Footer from './Footer';
+import './tabledata.css';
 import { useParams, Link } from 'react-router-dom';
 import { IconContext } from "react-icons";
 import { IoIosArrowDown} from "react-icons/io";
-
-
 
 
 function withRouter(Component) {
@@ -218,9 +210,7 @@ function withRouter(Component) {
   }
   return ComponentWithRouter
 }
-
-
-class EditUser extends Component { 
+class EditSesion extends Component { 
   
 constructor(props) {
   super(props)
@@ -232,7 +222,6 @@ constructor(props) {
   // this.onChangeEventID = this.onChangeEventID.bind(this);
   this.onSubmit = this.onSubmit.bind(this);
   
-
 // State
  this.state = {
   name: '',
@@ -263,7 +252,6 @@ constructor(props) {
 onChangeEventName(e) {
 this.setState({ name: e.target.value })
  }
-
  onChangeEventLocation(e) {
  this.setState({ location: e.target.value })
   }
@@ -284,7 +272,6 @@ onSubmit(e) {
   information: this.state.information,
   rollno: this.state.rollno
   };
-
  axios.put('https://kgtrainingserver.herokuapp.com/users/update-event/' + this.props.params.id, eventObject)
  .then((res) => {
    console.log("id", this.props.params.id)
@@ -299,60 +286,57 @@ onSubmit(e) {
   
  }
  
-
-
-
 render() {
   
   
       
    return (
      <>
-    <div className='main'>
+     <div className="main">
    <div className="form-wrapper">
      <Container>
-         <div className='heading'>
+         <div className="heading">
          <IconContext.Provider value={{size:"70"
 					}}>
 						<div className="arrow">
 						<IoIosArrowDown />
 						</div>
 						</IconContext.Provider>
-           <h2 >Edit user</h2></div>
-  <Form  className='formEdit' onSubmit={this.onSubmit}>
-    <Form.Group className="text1" controlId="Name">
+           <h2>Edit lesson</h2></div>
+  <Form className="formEdit" onSubmit={this.onSubmit}>
+    <Form.Group className="text1"controlId="Name">
        <Form.Label>Name</Form.Label>
           <Form.Control className="text" type="text" value={this.state.name} onChange={this.onChangeEventName} />
        </Form.Group>
     <Form.Group className="text1" controlId="Information">
       <Form.Label>Surname</Form.Label>
-    <Form.Control  className="text" type="text" value={this.state.information} onChange={this.onChangeEventInformation} />
+    <Form.Control className="text" type="text" value={this.state.information} onChange={this.onChangeEventInformation} />
   </Form.Group>
-  <Form.Group className="text1" controlId="Location">
+  <Form.Group className="text1"controlId="Location">
   <Form.Label>Role</Form.Label>
      <Form.Control className="text" type="text" value={this.state.location} onChange={this.onChangeEventLocation} />
 </Form.Group>
-<Form.Group className="text1" controlId="Roll No">
+<Form.Group className="text1"controlId="Roll No">
 <Form.Label>Permissions</Form.Label>
- <Form.Control  className="text" type="text" value={this.state.rollno} onChange={this.onChangeEventRollno} />
+ <Form.Control className="text" type="text" value={this.state.rollno} onChange={this.onChangeEventRollno} />
  </Form.Group>
  <br/>
-  <button className="btn_create"  size="lg" block="block" type="submit">
+  <button className="btn_create" type="submit">
   Update
  </button>
  
- <button className="btn_create" href="/"  size="lg" block="block" type="submit">
+ <button  href="/" className="btn_create" type="submit">
    Back
  </button>
  </Form>
  </Container>
+  
  </div>
  </div>
- <Footer /> 
+ <Footer />
  </>
  );
   }
  }
-const HOCEditUser = withRouter(EditUser);
-
- export default HOCEditUser;
+const HOCEditSesion = withRouter(EditSesion);
+ export default HOCEditSesion;

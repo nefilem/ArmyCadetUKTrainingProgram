@@ -1,3 +1,11 @@
+.mainHome{
+	overflow-x: hidden;
+	margin: 20px;
+}
+
+
+
+
 .icon{
     width: 50px;
     height:100px;
@@ -7,7 +15,7 @@
 .description{
     
     font-family:arial,sans-serif;
-    line-height: 1.4;
+    line-height: 2;
     color: darkgreen;
 	width:50%;
    margin:auto;
@@ -37,12 +45,12 @@
   text-align: center;
   justify-content: center;
   display: flex;
-  margin-top: 50px;
+  margin-top: 120px;
   
 }
 
   
-  .title h2{
+  .title h1{
      
       line-height: 1.1;
     font-family: Neo Sans W01,Helvetica,Arial,sans-serif;
@@ -51,6 +59,7 @@
     font-size: 1.625rem;
     margin-bottom: 1rem;
     color: #fff;
+	font-size:40px ;
   }
   
 

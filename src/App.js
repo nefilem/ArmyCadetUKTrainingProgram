@@ -20,26 +20,22 @@ import Footer from './components/Footer'
 import Signup from "./components/Singup";
 import Login from "./components/Login";
 import Main from "./components/Main";
-import Landing from './components/Landing'
+import EditSesion from './components/editsession'
+import TrainingSession from './components/editsession'
 import ProtectedRoute from './components/ProtectedRoute'
 // import Home from './components/Home'
 import TrainingRole from './components/role-training.component'
-import Analytics from './components/Analytics'
+import CommanderLessons from './components/commander'
 import Admin from './components/Admin'
 import Navigation from './components/Navigation'
 import Header from './components/Header'
-
 const App = () => {
   const usertoken = localStorage.getItem("token");
-
   const [editEmailID, cEditEmailID] = useState("");
-
   function handleEditClick(emailID) {
     cEditEmailID(emailID);
   }
-
   const [user, setUser] = React.useState(null);
-
   const handleLogin = () =>
     setUser({
       id: '1',
@@ -48,9 +44,7 @@ const App = () => {
       roles: ['admin'],
       // roles:['user'],
     });
-
   const handleLogout = () => setUser(null);
-
   return (
     <>
     
@@ -71,7 +65,6 @@ const App = () => {
 <Routes>
  <Route index element={<Main />} />
  <Route path="login" element={<Login />} />
- <Route path="/signup" exact element={<Signup />} />
  <Route element={<ProtectedRoute isAllowed={!!user} />}>
  <Route path="home" element={<Main />} />
  <Route path="training-table" element={<TrainingTable />} />
@@ -111,17 +104,35 @@ const App = () => {
          </ProtectedRoute>
        }
       />
+      <Route
+         path="comander"
+      element={
+         <ProtectedRoute
+           redirectPath="/home"
+            isAllowed={!!user && user.roles.includes('admin')}
+        >
+                <CommanderLessons />
+         </ProtectedRoute>
+       }
+      />
+      <Route
+         path="edit-lesson"
+      element={
+         <ProtectedRoute
+           redirectPath="/home"
+            isAllowed={!!user && user.roles.includes('admin')}
+        >
+              <EditSesion />
+         </ProtectedRoute>
+       }
+      />
        <Route path="*" element={<p>There's nothing here: 404!</p>} />
       </Routes> 
       </div>
            
   </div>  
-
       </>
       
   );
  }
-
 export default App
-
-    

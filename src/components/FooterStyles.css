@@ -8,6 +8,7 @@
   width: 100%;
   align-content: bottom;
   background-color: #f1f1f1;
+  overflow: hidden;
 }
 .logo {
   background-color: #262b27;

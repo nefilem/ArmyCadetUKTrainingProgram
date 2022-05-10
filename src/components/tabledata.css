@@ -62,16 +62,22 @@ td, th {
 
 .formEdit{
   background-color: #fff;
-  width: 100vh;
+  width: 50vw;
   color: #262b27;
   display: flex;
-  left: 0px;
-  right: 0px;
+ align-items: center;
+ justify-content: center;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  
 }
 .formEdit .text1 .text{
 outline: 1px solid transparent;
+width: 100%;
+text-align: center;
+
 }
 .formEdit .text1 .text:focus{
   outline: 3px solid yellow;
@@ -82,22 +88,51 @@ outline: 1px solid transparent;
   font-weight:700;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  align-self: center;
 }
 .btn_create{
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 5px 10px ;
+ 
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
+  background-color: #262b27;
+  color:#fff;
+  width: 50%;
+  height: 40px;
+}
+.btn_create:hover{
+  color: yellow;
 }
 .heading{
-  background-color: #262b27;
+  background-color: rgba(38,43,39,.7);
   color: #fff;
   display: flex;
   flex-direction: column;
+  width: 50vw;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  align-self: center;
+  
+}
+.mainHeading{
+  background-color: #262b27;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 20px;
+  
 }
 .arrow{
 	align-self: flex-start;
 	
 	color: yellow;
+}
+.label{
+  font-weight: 700;
+  font-size: 40px;
+  width: 50vw;
+
 }

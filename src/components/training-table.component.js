@@ -68,10 +68,10 @@ class TrainingTable extends React.Component {
       
       <form onSubmit={this.handleSubmit}>
         
-      <label>
+      <label className='label'>
           Month:
           <br/>
-          <select value={this.state.value} onChange={this.handleChange}>
+          <select style={{"width":"50%"}}value={this.state.value} onChange={this.handleChange}>
             <option value="April">April</option>
             <option value="May">May</option>
             <option value="June">June</option>
@@ -79,14 +79,14 @@ class TrainingTable extends React.Component {
           </select>          
         </label>
         <br/>
-        <label>
+        <label className='label'>
          Level
          <br/>
         <input type="text" name="Level" />
         <br/>
         </label>
         <br/><br/>
-        <input className='btn_edit' type="submit" value="Submit" />
+        <input className='btn_create' type="submit" value="Submit" />
       </form>
       <br/><br/>
       <h3>Name </h3>

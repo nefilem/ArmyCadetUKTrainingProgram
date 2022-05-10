@@ -21,6 +21,7 @@ export default class Header extends Component{
         window.location.reload();
       };
       return (
+        <div className="main_container">
 <header className="App-header">
 <hr className="hr-line"></hr>
 <Navbar>
@@ -74,6 +75,7 @@ export default class Header extends Component{
     </Navbar>
     <hr className="hr-line"></hr>
   </header>
+  </div>
    );
 }
 }
